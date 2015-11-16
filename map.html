@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>result</title>
+<link href="/static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.useso.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href='http://fonts.useso.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<!--slider-->
+<link rel="stylesheet" href="/static/css/flexslider.css" type="text/css" media="all" />
+<script src="/static/js/modernizr.js"></script>
+<!-- jQuery -->
+ <script src="/static/js/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+  <!-- FlexSlider -->
+  <script defer src="/static/js/jquery.flexslider.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+   <div class="header">
+	    <div class="header-top">
+			<div class="wrap"> 
+				    <div class="logo">
+						<a href="/select/"><img src="/static/images/logo.png" alt=""/></a>
+					</div>
+					<div class="personal">
+						<form action="/personal/" method="get">
+						  	<input type="submit" value="个人中心" />
+						</form>
+					</div>
+				    <div class="clear"></div> 
+				</div>
+		</div>
+		<div class="header-bottom">
+			  <div class="wrap"> 
+			      <div class="top-nav">
+						<ul>
+							<li><a href="/select/">主楼</a></li>
+							<li><a href="/select/">正心楼</a></li> 
+							<li><a href="/select/">诚意楼</a></li> 
+							<li><a href="/select/">致知楼</a></li> 
+						</ul>
+					</div>
+	    			<div class="clear"></div>	
+	   		 </div>
+  		</div>
+  	</div>
+	 
+	 <div class="footer">
+		<div class="wrap">
+	       <div class="footer-top" width = "100%">
+						<ul>
+							<table width=20%>
+								<tr>
+								<td>Information</td>
+								<td><a href="/aboutus/">About us</a></td>
+
+							</tr>
+							</table>
+						</ul>
+					
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>
+
+    	
+    	
+            
