@@ -1,0 +1,48 @@
+﻿<html>
+    
+    <head>
+        <title>
+            浏览作者
+        </title>
+        <style type="text/css">
+            body{background-color:#CAE1FF}
+        </style>
+    </head>
+    {% csrf_token %}
+    <table border=1 style="float:left;margin-top:50px;margin-left:850px;color:#4876FF">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                姓名
+            </th>
+            <th>
+                年龄
+            </th>
+            <th>
+                国家
+            </th>
+        </tr>
+        {% for author in author_list %}
+        <tr>
+            <td>
+                {{ author.AuthorID }}
+            </td>
+            <td>
+                {{ author.Name}}
+            </td>
+            <td>
+                {{ author.Age }}
+            </td>
+            <td>
+                {{ author.Country }}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div style="left: 1300px; position: absolute; top: 200px;">
+        <input type="button" name="Submit" onclick="javascript:history.back(-1);"
+        value="返回上一页">
+    </div>
+</html>

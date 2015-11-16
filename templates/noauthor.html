@@ -1,0 +1,31 @@
+﻿<html>
+    
+    <head>
+        <title>
+            添加新作者
+        </title>
+        <style type="text/css">
+            h1{color:red} body{background-color:#90EE90}
+        </style>
+    </head>
+    <h1 align="center">
+        <div style="left: 850px; position: absolute; top: 100px;">
+            <big>
+                没有这个作者！
+            </big>
+        </div>
+    </h1>
+    <div style="left: 900px; position: absolute; top: 200px;">
+        <form action="/addauthor/" method="get">
+            {% csrf_token %}
+            <input type="submit" value="单击此处添加新作者" align="center">
+        </form>
+    </div>
+    <div style="left: 925px; position: absolute; top: 250px;">
+        <input type="button" name="Submit" onclick="javascript:history.back(-1);"
+        value="返回上一页">
+    </div>
+<div style="left: 10px; position: absolute; top: 10px;">
+   <a href="http://127.0.0.1:8000/search/">返回首页</a>
+</div>
+</html>

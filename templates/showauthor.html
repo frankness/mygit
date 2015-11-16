@@ -1,0 +1,44 @@
+﻿<html>
+    
+    <head>
+        <title>
+            目录
+        </title>
+        <style type="text/css">
+            body {background-repeat:no-repeat;}
+        </style>
+    </head>
+    
+    <body background=C:\Users\yi\book\html\image\list.png>
+        <h1>
+            书目列表
+        </h1>
+        <h3>
+            {% if booklist %} {% for book in booklist %}
+            <li>
+                <a style="font-size:30px;" href={% url "detail" book.ISBN %}>
+                    {{book.Title}}
+                </a>
+                <a href={% url "delete" book.ISBN %}>
+                    删除
+                </a>
+                <a href={% url "updata" book.ISBN %}>
+                    更新
+                </a>
+            </li>
+            {% endfor %} {% endif %}
+            <form action="/addbook/" method="get">
+                {% csrf_token %}
+                <input type='hidden' name='author_name' value={{ author_name }}>
+                <input type="submit" value="单击此处添加新书" align="center">
+            </form>
+        <input type="button" name="Submit" onclick="javascript:history.back(-1);"
+        value="返回上一页">
+        </h3>
+    </div>
+    <div style="left: 1000px; position: absolute; top: 10px;">
+   	<a href="http://127.0.0.1:8000/search/">返回首页</a>
+    </div>
+    </body>
+
+</html>

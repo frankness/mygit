@@ -1,0 +1,62 @@
+﻿<html>
+<head>
+<title>详细介绍</title>
+<style type="text/css">
+h1{color:#008B8B font-size:200% } body{background:url(C:/Users/yi/book/html/image/detail.jpg) no-repeat center #98FB98;}
+p.italic {font-style:italic }
+</style>
+</head>
+<body>
+<div style="left: 900px; position: absolute; top: 200px;">
+	<h1>
+	<p class="italic">
+		详细信息
+	</p>
+	</h1>
+</div>
+ {% csrf_token %}
+<table border="1" style="float:left;margin-top:400px;margin-left:750px;color:#4B0082">
+<tr>
+	<th>
+		ISBN
+	</th>
+	<th>
+		书名
+	</th>
+	<th>
+		出版商
+	</th>
+	<th>
+		出版日期
+	</th>
+	<th>
+		价格
+	</th>
+</tr>
+<tr>
+	<td>
+		{{ prebook.ISBN }}
+	</td>
+	<td>
+		{{ prebook.Title}}
+	</td>
+	<td>
+		{{ prebook.Publisher }}
+	</td>
+	<td>
+		{{ prebook.PublishDate }}
+	</td>
+	<td>
+		{{ prebook.Price }}
+	</td>
+</tr>
+</table>
+    <div style="left: 1300px; position: absolute; top: 300px;">
+        <input type="button" name="Submit" onclick="javascript:history.back(-1);"
+        value="返回上一页">
+    </div>
+<div style="left: 10px; position: absolute; top: 10px;">
+   <a href="http://127.0.0.1:8000/search/">返回首页</a>
+</div>
+</body>
+</html>

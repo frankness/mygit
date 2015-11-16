@@ -1,0 +1,68 @@
+﻿<html>
+    
+    <head>
+        <title>
+            更新书目
+        </title>
+        <style type="text/css">
+            h1{color:#AB82FF} body{background-color:#80FFFF}
+        </style>
+    </head>
+    
+    <body>
+        <h1>
+            <div style="left: 900px; position: absolute; top: 100px;">
+                <big>
+                    更新书目
+                </big>
+            </div>
+        </h1>
+        <form method="post">
+            {% csrf_token %}
+            <table border=1 style="float:left;margin-top:200px;margin-left:600px;color:#7A67EE">
+                <tr>
+                    <th>
+                        书名
+                    </th>
+                    <th>
+                        出版商
+                    </th>
+                    <th>
+                        出版日期
+                    </th>
+                    <th>
+                        价格
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <input name="rtitle" type="text">
+                    </td>
+                    <td>
+                        <input name="rpublisher" type="text">
+                    </td>
+                    <td>
+                        <input name="rpublishdate" type="text">
+                    </td>
+                    <td>
+                        <input name="rprice" type="text">
+                    </td>
+                    <td>
+                        <input type="submit" value="更新">
+                        <input type="reset" value="重填">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div style="left: 1300px; position: absolute; top: 300px;">
+            <input type="button" name="Submit" onclick="javascript:history.back(-1);"
+            value="返回上一页">
+        </div>
+        <div style="left: 10px; position: absolute; top: 10px;">
+            <a href="http://127.0.0.1:8000/search/">
+                返回首页
+            </a>
+        </div>
+    </body>
+
+</html>

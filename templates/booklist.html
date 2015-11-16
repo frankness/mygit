@@ -1,0 +1,55 @@
+﻿<html>
+    
+    <head>
+        <title>
+            浏览书目
+        </title>
+        <style type="text/css">
+            body{background-color:#CAE1FF}
+        </style>
+    </head>
+    {% csrf_token %}
+    <table border=1 style="float:left;margin-top:50px;margin-left:750px;color:#4876FF">
+        <tr>
+            <th>
+                ISBN
+            </th>
+            <th>
+                书名
+            </th>
+            <th>
+                出版商
+            </th>
+            <th>
+                出版日期
+            </th>
+            <th>
+                价格
+            </th>
+        </tr>
+        {% for book in book_list %}
+        <tr>
+            <td>
+                {{ book.ISBN }}
+            </td>
+            <td>
+                {{ book.Title}}
+            </td>
+            <td>
+                {{ book.Publisher }}
+            </td>
+            <td>
+                {{ book.PublishDate }}
+            </td>
+            <td>
+                {{ book.Price}}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div style="left: 1300px; position: absolute; top: 200px;">
+        <input type="button" name="Submit" onclick="javascript:history.back(-1);"
+        value="返回上一页">
+    </div>
+
+</html>

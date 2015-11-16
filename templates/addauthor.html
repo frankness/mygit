@@ -1,0 +1,54 @@
+﻿<html>
+<head>
+<title>添加作者</title>
+<style type="text/css">
+            h1{color:#AB82FF} body{background-color:#CAE1FF}
+</style>
+</head>
+<body>
+<h1 align="center">
+<div style="left: 777px; position: absolute; top: 100px;">
+	<big>
+                请输入作者信息
+	</big>
+</div>
+</h1>
+<form method="post">
+ {% csrf_token %}
+	<table border="1" style="float:left;margin-top:200px;margin-left:600px;color:#7A67EE">
+	<tr>
+		<th>
+			姓名
+		</th>
+		<th>
+			年龄
+		</th>
+		<th>
+			国家
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<input name="name" type="text">
+		</td>
+		<td>
+			<input name="age" type="text">
+		</td>
+		<td>
+			<input name="country" type="text">
+		</td>
+		<td>
+			<input type="submit" value="保存"><input type="reset" value="重填">
+		</td>
+	</tr>
+	</table>
+</form>
+    <div style="left: 1300px; position: absolute; top: 300px;">
+        <input type="button" name="Submit" onclick="javascript:history.back(-1);"
+        value="返回上一页">
+    </div>
+<div style="left: 10px; position: absolute; top: 10px;">
+   <a href="http://127.0.0.1:8000/search/">返回首页</a>
+</div>
+</body>
+</html>

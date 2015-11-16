@@ -1,0 +1,43 @@
+﻿<html>
+    
+    <head>
+        <title>
+            图书管理
+        </title>
+        <style type="text/css">
+            h1 {color: #7EC0EE} body{background:url(C:/Users/yi/book/html/image/book.png)
+            no-repeat right #B2DFEE;} span.highlight { background-color:#BBFFFF }
+        </style>
+    </head>
+    
+    <body>
+        <h1 align="center">
+            <big>
+                欢迎进入图书数据库
+            </big>
+        </h1>
+        <h2 align="center">
+            <small>
+                <span class="highlight">
+                    请输入作者姓名:
+                </span>
+            </small>
+            <form action="/showauthor/" method="get">
+                {% csrf_token %}
+                <input type="text" name="qq" align="center">
+                <input type="submit" value="搜索" align="center">
+            </form>
+        </h2>
+    <div style="left: 850px; position: absolute; top: 150px;">
+        <form action="/booklist/">
+            <input type="submit" value="单击此处查看所有图书">
+        </form>
+    </div>
+    <div style="left: 850px; position: absolute; top: 180px;">
+        <form action="/authorlist/">
+            <input type="submit" value="单击此处查看所有作者">
+        </form>
+    </div>
+    </body>
+
+</html>
